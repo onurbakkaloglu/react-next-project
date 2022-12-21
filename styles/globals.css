@@ -28,3 +28,11 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-dots {
+  @apply !flex justify-start w-full
+}
+
+.slick-dots .slick-active div {
+  @apply bg-primary
+}

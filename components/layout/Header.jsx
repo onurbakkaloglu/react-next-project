@@ -4,14 +4,16 @@ import Navbar from './Navbar'
 import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa"
 import Search from '../ui/Search'
 import { GiHamburgerMenu } from "react-icons/gi"
+import { useRouter } from 'next/router'
 
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false)
   const [menuModal, setMenuModal] = useState(false)
 
+  const router = useRouter();
   return (
-    <div className='bg-headerBg h-[5.5rem]'>
+    <div className={`h-[5.5rem] z-40 relative ${router.asPath == "/" ? "bg-transparent" : "bg-headerBg"}`}>
       <div className='flex justify-between h-24 container mx-auto text-white'>
         <div className='flex items-center'>
           <Logo />
