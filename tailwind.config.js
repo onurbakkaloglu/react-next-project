@@ -20,7 +20,8 @@ module.exports = {
         headerBg: '#1f2427',
         btnBg: '#ffbe33',
         btnBgHover: '#e69c00',
-        primary: '#ffbe33'
+        primary: '#ffbe33',
+        secondary: '#222831'
       }
     },
   },
