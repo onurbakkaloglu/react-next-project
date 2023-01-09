@@ -1,5 +1,6 @@
 import React from 'react'
 import Campaigns from '../../components/Campaigns'
+import MenuWrapper from '../../components/product/MenuWrapper'
 import Carousel from '../../components/ui/Carousel'
 
 const index = () => {
@@ -7,6 +8,7 @@ const index = () => {
     <div>
       <Carousel/>
       <Campaigns />
+      <MenuWrapper />
     </div>
   )
 }
