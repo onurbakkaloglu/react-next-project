@@ -21,7 +21,8 @@ module.exports = {
         btnBg: '#ffbe33',
         btnBgHover: '#e69c00',
         primary: '#ffbe33',
-        secondary: '#222831'
+        secondary: '#222831',
+        danger: "#ff0000"
       }
     },
   },
