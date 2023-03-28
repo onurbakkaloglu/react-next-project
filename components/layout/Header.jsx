@@ -5,6 +5,7 @@ import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa"
 import Search from '../ui/Search'
 import { GiHamburgerMenu } from "react-icons/gi"
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 
 const Header = () => {

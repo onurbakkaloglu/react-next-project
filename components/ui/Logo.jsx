@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Logo = () => {
     return (
-        <div className='text-[2rem]'>
+        <Link href="/" className='text-[2rem]'>
             Feane
-        </div>
+        </Link>
     )
 }
 
