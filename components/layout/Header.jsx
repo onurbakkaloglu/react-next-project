@@ -23,14 +23,14 @@ const Header = () => {
           <Navbar menuModal={menuModal} setMenuModal={setMenuModal} />
         </div>
         <div className='flex items-center gap-x-4'>
+          <Link href="/auth/login">
+            <FaUserAlt className='hover:text-btnBg transition-all cursor-pointer' />
+          </Link>
           <a>
-            <FaUserAlt className='hover:text-btnBg transition-all' />
-          </a>
-          <a>
-            <FaShoppingCart className='hover:text-btnBg transition-all' />
+            <FaShoppingCart className='hover:text-btnBg transition-all cursor-pointer' />
           </a>
           <button onClick={() => setIsSearchModal(true)}>
-            <FaSearch className='hover:text-btnBg transition-all' />
+            <FaSearch className='hover:text-btnBg transition-all cursor-pointer' />
           </button>
           <a href='#' className='md:inline-block hidden'>
             <button className='text-white bg-btnBg rounded-full py-2 px-6 hover:bg-btnBgHover transition-all'>Order Online</button>

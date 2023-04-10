@@ -3,7 +3,7 @@ import Input from './form/Input'
 import Title from './ui/Title'
 import { useFormik } from 'formik';
 import { resolve } from 'styled-jsx/css';
-import { reservationSchema } from '../schmea/reservation';
+import { reservationSchema } from '../schema/reservation';
 
 const Reservation = () => {
 
