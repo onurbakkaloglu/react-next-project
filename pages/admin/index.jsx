@@ -1,7 +1,7 @@
 import { useFormik } from 'formik';
 import Input from '../../components/form/Input'
 import Title from '../../components/ui/Title'
-import { loginSchema } from '../../schema/login';
+import { adminSchema } from '../../schema/admin';
 import Link from 'next/link';
 
 const login = () => {
@@ -12,22 +12,22 @@ const login = () => {
 
     const {values, errors, touched, handleSubmit, handleChange, handleBlur} = useFormik({
         initialValues:{
-            email: "",
+            username: "",
             password: "",
         },
         onSubmit,
-        validationSchema: loginSchema,
+        validationSchema: adminSchema,
     });
 
     const inputs = [
         {
             id: 1,
-            name: "email",
-            type: "email",
-            placeholder: "Your Email Adress",
-            value: values.email,
-            errorMessage: errors.email,
-            touched: touched.email,
+            name: "username",
+            type: "text",
+            placeholder: "Your Username",
+            value: values.username,
+            errorMessage: errors.username,
+            touched: touched.username,
         },
         {
             id: 2,
@@ -40,7 +40,7 @@ const login = () => {
         },
     ]
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto py-6'>
       <form className='flex flex-col items-center my-20 md:w-1/2 w-full mx-auto' onSubmit={handleSubmit}>
         <Title addClass="text-[40px] mb-6">Giriş Yap</Title>
         <div className='flex flex-col gap-y-3 w-full'>
@@ -48,12 +48,9 @@ const login = () => {
                  <Input key={input.id} {...input} onChange={handleChange} onBlur={handleBlur} />
             ))}
             <div className='flex flex-col w-full gap-y-3 mt-6'>
-            <button className='text-white bg-btnBg rounded-full py-2 px-6 hover:bg-btnBgHover transition-all'>Giriş Yap</button>
-            <button className='text-white bg-secondary rounded-full py-2 px-6 hover:bg-btnBgHover transition-all'>
-            <i class="fa fa-github mr-2 text-xl"></i>Github
-            </button>
-            <Link href="/auth/register">
-              <span className='text-sm underline cursor-pointer text-secondary'>Yeni Hesap Oluştur</span>
+            <button className='text-white bg-btnBg rounded-full py-2 px-6 hover:bg-btnBgHover transition-all'>Yönetici Girişi Yap</button>
+            <Link href="/">
+              <span className='text-sm underline cursor-pointer text-secondary'>Anasayfa</span>
             </Link>
             </div>
         </div>
